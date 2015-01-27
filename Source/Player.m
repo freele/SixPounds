@@ -20,7 +20,7 @@
 }
 
 - (void) didLoadFromCCB{
-    NSLog(@"init player");
+//    NSLog(@"init player");
     
     
     _direction = -1;
@@ -29,7 +29,7 @@
 }
 
 - (void) flip{
-    NSLog(@"flip");
+//    NSLog(@"flip");
     _direction *= -1;
     CGPoint finalPoint;
     
@@ -60,7 +60,7 @@
 }
 
 - (void) fire{
-    NSLog(@"fire");
+//    NSLog(@"fire");
     [self spawnBullet];
 
 }

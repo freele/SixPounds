@@ -53,7 +53,6 @@
         touchLocation.y < _flipInput.contentSize.height &&
         touchLocation.x > 0 &&
         touchLocation.y > 0){
-        NSLog(@"_flipInput");
         [self playerFlip];
     }
     
@@ -62,7 +61,6 @@
         touchLocation.y < _fireInput.contentSize.height &&
         touchLocation.x > 0 &&
         touchLocation.y > 0){
-        NSLog(@"_fireInput");
         [self playerFire];
     }
     
