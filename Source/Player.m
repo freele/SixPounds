@@ -12,6 +12,9 @@
     int _direction;
     float _speed;
     
+    CCNode *_bulletSpawnPoint;
+    CCNode *_bulletSpawnPointFlipped;
+    
     CCSprite *_img;
     id _actionSeq;
 }
@@ -58,7 +61,26 @@
 
 - (void) fire{
     NSLog(@"fire");
-    
+    [self spawnBullet];
+
+}
+
+- (void) spawnBullet{
+    __block CCNode *bullet = [CCBReader load:@"ccbResources/entities/bullet"];
+
+    CGPoint spawnPoint = _direction > 0 ? _bulletSpawnPoint.position : _bulletSpawnPointFlipped.position;
+    bullet.position = [self convertToWorldSpace: spawnPoint];
+    CGPoint finalPoint = ccp(bullet.position.x + 300 * _direction, self.scene.contentSize.height);
+    id actionBulletMove = [CCActionMoveTo actionWithDuration:1.5
+                                                   position:finalPoint];
+    id actionBulletRemove = [CCActionCallBlock actionWithBlock:^{
+        [self.parent removeChild:bullet];
+        bullet = nil;
+    }];
+    id actionDroneSeq = [CCActionSequence actions:actionBulletMove, actionBulletRemove, nil];
+    [bullet runAction:actionDroneSeq];
+    [self.parent addChild:bullet];
+
 }
 
 @end
