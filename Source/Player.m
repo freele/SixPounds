@@ -11,6 +11,7 @@
 @implementation Player{
     int _direction;
     float _speed;
+    
     CCSprite *_img;
     id _actionSeq;
 }
@@ -20,11 +21,9 @@
     
     
     _direction = -1;
-    _speed = 100;
+    _speed = 100.0;
     [self flip];
-    
 }
-
 
 - (void) flip{
     NSLog(@"flip");

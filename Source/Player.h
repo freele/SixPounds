@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Apportable. All rights reserved.
 //
 
-#import "CCScene.h"
+#import "CCNode.h"
 
 @interface Player : CCNode
 
