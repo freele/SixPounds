@@ -17,6 +17,8 @@
     CCNode *_flipInput;
     CCNode *_fireInput;
     
+    CCPhysicsNode *_physNode;
+    
     float _spawnBasePause;
 }
 
@@ -26,11 +28,18 @@
     
     _pauseScreen.zOrder = 100;
     
+    _physNode.collisionDelegate = self;
+    
     _spawnBasePause = 3.0;
     id actionDelay = [CCActionDelay actionWithDuration:3];
     id actionSpawn = [CCActionCallFunc actionWithTarget:self selector:@selector(spawnDrone)];
     id actionSeq = [CCActionSequence actions:actionDelay, actionSpawn, nil];
     [self runAction: actionSeq];
+    
+}
+
+-(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair drone:(CCNode *)nodeA bullet:(CCNode *)nodeB{
+    int wait = 1;
     
 }
 
@@ -70,12 +79,12 @@
     id actionDroneMove = [CCActionMoveTo actionWithDuration:3
                                                    position:finalPoint];
     id actionDroneRemove = [CCActionCallBlock actionWithBlock:^{
-        [self removeChild:drone];
+        [_physNode removeChild:drone];
         drone = nil;
     }];
     id actionDroneSeq = [CCActionSequence actions:actionDroneMove, actionDroneRemove, nil];
     [drone runAction:actionDroneSeq];
-    [self addChild:drone];
+    [_physNode addChild:drone];
     
     
     float delay = _spawnBasePause * (0.5 + 0.5*(float)rand()/RAND_MAX);
