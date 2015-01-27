@@ -93,6 +93,7 @@
 		B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B4117B978D7009739AE /* CoreText.framework */; };
 		B78A0B10198AF87200C63841 /* Published-Android in Resources */ = {isa = PBXBuildFile; fileRef = B78A0B0F198AF87200C63841 /* Published-Android */; };
 		EF04883D1A76DFEC00F1BACB /* BorderScene.m in Sources */ = {isa = PBXBuildFile; fileRef = EF04883C1A76DFEC00F1BACB /* BorderScene.m */; };
+		EF0488411A76E3CD00F1BACB /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0488401A76E3CD00F1BACB /* Player.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -232,6 +233,8 @@
 		D352B48019EC608A00829775 /* MetalShaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MetalShaders; path = Source/MetalShaders; sourceTree = "<group>"; };
 		EF04883B1A76DFEC00F1BACB /* BorderScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BorderScene.h; path = Source/BorderScene.h; sourceTree = "<group>"; };
 		EF04883C1A76DFEC00F1BACB /* BorderScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BorderScene.m; path = Source/BorderScene.m; sourceTree = "<group>"; };
+		EF04883F1A76E3CD00F1BACB /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = Source/Player.h; sourceTree = "<group>"; };
+		EF0488401A76E3CD00F1BACB /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = Source/Player.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -460,11 +463,13 @@
 		B737893C1807616C0076A88C /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				7A40362019DDEF0D007B6E8F /* Platforms */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
 				EF04883B1A76DFEC00F1BACB /* BorderScene.h */,
 				EF04883C1A76DFEC00F1BACB /* BorderScene.m */,
+				EF04883F1A76E3CD00F1BACB /* Player.h */,
+				EF0488401A76E3CD00F1BACB /* Player.m */,
+				7A40362019DDEF0D007B6E8F /* Platforms */,
 				D352B48019EC608A00829775 /* MetalShaders */,
 			);
 			name = Source;
@@ -870,6 +875,7 @@
 				B73789871807631A0076A88C /* main.m in Sources */,
 				7A046D8C19E8A20E004C4763 /* MainScene.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
+				EF0488411A76E3CD00F1BACB /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

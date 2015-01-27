@@ -51,7 +51,7 @@
 				<key>displayName</key>
 				<string>guard</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>_img</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -96,8 +96,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>2.8208539485931396</real>
+							<real>2.8208539485931396</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -146,12 +146,10 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string></string>
+		<string>Player</string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
@@ -189,8 +187,8 @@
 				<string>Size</string>
 				<key>value</key>
 				<array>
-					<real>0.0</real>
-					<real>0.0</real>
+					<real>62</real>
+					<real>102</real>
 					<integer>0</integer>
 					<integer>0</integer>
 				</array>
@@ -220,6 +218,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
