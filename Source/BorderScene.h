@@ -8,6 +8,6 @@
 
 #import "CCScene.h"
 
-@interface BorderScene : CCPhysicsNode <CCPhysicsCollisionDelegate>
+@interface BorderScene : CCScene <CCPhysicsCollisionDelegate>
 
 @end

@@ -17,7 +17,9 @@
     CCNode *_flipInput;
     CCNode *_fireInput;
     
-    CCPhysicsNode *_physNode;
+    CCNode *_bulletsWrapper;
+    CCNode *_dronesWrapper;
+    
     
     float _spawnBasePause;
 }
@@ -27,8 +29,6 @@
     self.multipleTouchEnabled = TRUE;
     
     _pauseScreen.zOrder = 100;
-    
-    _physNode.collisionDelegate = self;
     
     _spawnBasePause = 3.0;
     id actionDelay = [CCActionDelay actionWithDuration:3];
@@ -77,12 +77,12 @@
     id actionDroneMove = [CCActionMoveTo actionWithDuration:3
                                                    position:finalPoint];
     id actionDroneRemove = [CCActionCallBlock actionWithBlock:^{
-        [_physNode removeChild:drone];
+        [_dronesWrapper removeChild:drone];
         drone = nil;
     }];
     id actionDroneSeq = [CCActionSequence actions:actionDroneMove, actionDroneRemove, nil];
     [drone runAction:actionDroneSeq];
-    [_physNode addChild:drone];
+    [_dronesWrapper addChild:drone];
     
     
     float delay = _spawnBasePause * (0.5 + 0.5*(float)rand()/RAND_MAX);
