@@ -57,13 +57,14 @@
     [_physNode addChild:crystal];
 }
 
--(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair player:(CCNode *)player crystal:(CCNode *)crystal{
-    
+-(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair player:(CCNode *)player crystal:(CCNode *)crystal{
     [crystal removeFromParentAndCleanup:TRUE];
-    int wait = 1;
-
-    
+    return FALSE;
 }
+
+//-(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair player:(CCNode *)player crystal:(CCNode *)crystal{
+
+//}
 
 - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
