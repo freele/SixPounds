@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>18</integer>
+	<integer>19</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -763,19 +763,84 @@
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>16</integer>
+				<integer>18</integer>
 				<key>baseClass</key>
-				<string>CCNode</string>
+				<string>CCPhysicsNode</string>
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>DronesWrapper</string>
+				<string>CCPhysicsNode</string>
 				<key>memberVarAssignmentName</key>
-				<string>_dronesWrapper</string>
+				<string>_physNode</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
+				<key>physicsBody</key>
+				<dict>
+					<key>affectedByGravity</key>
+					<false/>
+					<key>allowsRotation</key>
+					<false/>
+					<key>bodyShape</key>
+					<integer>0</integer>
+					<key>collisionCategories</key>
+					<array/>
+					<key>collisionMask</key>
+					<array/>
+					<key>collisionType</key>
+					<string></string>
+					<key>cornerRadius</key>
+					<real>0.0</real>
+					<key>density</key>
+					<real>1</real>
+					<key>dynamic</key>
+					<false/>
+					<key>elasticity</key>
+					<real>0.30000001192092896</real>
+					<key>friction</key>
+					<real>0.30000001192092896</real>
+					<key>points</key>
+					<array>
+						<array>
+							<real>0.0</real>
+							<real>0.0</real>
+						</array>
+						<array>
+							<real>-6.167701244354248</real>
+							<real>41.769443511962891</real>
+						</array>
+						<array>
+							<real>590.20782470703125</real>
+							<real>47.237289428710938</real>
+						</array>
+						<array>
+							<real>568</real>
+							<real>0.0</real>
+						</array>
+					</array>
+					<key>polygons</key>
+					<array>
+						<array>
+							<array>
+								<real>568</real>
+								<real>0.0</real>
+							</array>
+							<array>
+								<real>590.20782470703125</real>
+								<real>47.237289428710938</real>
+							</array>
+							<array>
+								<real>-6.167701244354248</real>
+								<real>41.769443511962891</real>
+							</array>
+							<array>
+								<real>0.0</real>
+								<real>0.0</real>
+							</array>
+						</array>
+					</array>
+				</dict>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -807,8 +872,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
-							<real>0.0</real>
+							<real>568</real>
+							<real>320</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -837,7 +902,28 @@
 							<integer>0</integer>
 						</array>
 					</dict>
+					<dict>
+						<key>name</key>
+						<string>gravity</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.0</real>
+							<real>-100</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>sleepTimeThreshold</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>0.5</real>
+					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1889,8 +1975,6 @@
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

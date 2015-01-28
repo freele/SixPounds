@@ -20,11 +20,17 @@
     CCNode *_bulletsWrapper;
     CCNode *_dronesWrapper;
     
+    CCPhysicsNode *_physNode;
+    
+    int _counter;
+    
     
     float _spawnBasePause;
 }
 
 - (void) didLoadFromCCB{
+    
+    _counter = 0;
     self.userInteractionEnabled = TRUE;
     self.multipleTouchEnabled = TRUE;
     
@@ -70,19 +76,26 @@
 - (void) spawnDrone{
 //    NSLog(@"spawnDrone");
     
-    __block CCNode *drone = [CCBReader load:@"ccbResources/entities/npc/drone"];
+    __block CCPhysicsNode *drone = (CCPhysicsNode*)[CCBReader load:@"ccbResources/entities/npc/drone"];
+    drone.physicsBody.collisionMask = @[];
     float droneHeight = 0.7;
-    drone.position = ccp(-drone.contentSize.width, droneHeight*self.parent.contentSize.height);
+    drone.position = ccp(drone.contentSize.width, droneHeight*self.parent.contentSize.height);
     CGPoint finalPoint = ccp(self.parent.contentSize.width, droneHeight*self.parent.contentSize.height);
-    id actionDroneMove = [CCActionMoveTo actionWithDuration:3
-                                                   position:finalPoint];
-    id actionDroneRemove = [CCActionCallBlock actionWithBlock:^{
-        [_dronesWrapper removeChild:drone];
-        drone = nil;
-    }];
-    id actionDroneSeq = [CCActionSequence actions:actionDroneMove, actionDroneRemove, nil];
-    [drone runAction:actionDroneSeq];
-    [_dronesWrapper addChild:drone];
+    
+    
+//    id actionDroneMove = [CCActionMoveTo actionWithDuration:3
+//                                                   position:finalPoint];
+//    id actionDroneRemove = [CCActionCallBlock actionWithBlock:^{
+//        [_physNode removeChild:drone];
+//        drone = nil;
+//    }];
+//    id actionDroneSeq = [CCActionSequence actions:actionDroneMove, actionDroneRemove, nil];
+//    [drone runAction:actionDroneSeq];
+    
+    
+    [_physNode addChild:drone];
+    
+    [drone.physicsBody applyImpulse:ccp(50, 0)];
     
     
     float delay = _spawnBasePause * (0.5 + 0.5*(float)rand()/RAND_MAX);
