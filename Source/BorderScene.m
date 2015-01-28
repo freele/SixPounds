@@ -30,22 +30,38 @@
 
 - (void) didLoadFromCCB{
     
+    _physNode.collisionDelegate = self;
+    
     _counter = 0;
     self.userInteractionEnabled = TRUE;
     self.multipleTouchEnabled = TRUE;
     
     _pauseScreen.zOrder = 100;
     
-    _spawnBasePause = 3.0;
-    id actionDelay = [CCActionDelay actionWithDuration:3];
+    _spawnBasePause = 4.0;
+    id actionDelay = [CCActionDelay actionWithDuration:2]; // _TODO tune start delay
     id actionSpawn = [CCActionCallFunc actionWithTarget:self selector:@selector(spawnDrone)];
     id actionSeq = [CCActionSequence actions:actionDelay, actionSpawn, nil];
     [self runAction: actionSeq];
     
 }
 
--(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair drone:(CCNode *)nodeA bullet:(CCNode *)nodeB{
+-(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair drone:(CCNode *)drone bullet:(CCNode *)bullet{
+
+    [drone removeFromParentAndCleanup:TRUE];
+    [bullet removeFromParentAndCleanup:TRUE];
+
+    CCPhysicsNode *crystal = (CCPhysicsNode*)[CCBReader load:@"ccbResources/entities/crystal"];
+    crystal.position = drone.position;
+    
+    [_physNode addChild:crystal];
+}
+
+-(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair player:(CCNode *)player crystal:(CCNode *)crystal{
+    
+    [crystal removeFromParentAndCleanup:TRUE];
     int wait = 1;
+
     
 }
 
@@ -77,9 +93,9 @@
 //    NSLog(@"spawnDrone");
     
     __block CCPhysicsNode *drone = (CCPhysicsNode*)[CCBReader load:@"ccbResources/entities/npc/drone"];
-    drone.physicsBody.collisionMask = @[];
+//    drone.physicsBody.collisionMask = @[];
     float droneHeight = 0.7;
-    drone.position = ccp(drone.contentSize.width, droneHeight*self.parent.contentSize.height);
+    drone.position = ccp(-drone.contentSize.width, droneHeight*self.parent.contentSize.height);
     CGPoint finalPoint = ccp(self.parent.contentSize.width, droneHeight*self.parent.contentSize.height);
     
     
@@ -95,7 +111,7 @@
     
     [_physNode addChild:drone];
     
-    [drone.physicsBody applyImpulse:ccp(50, 0)];
+    [drone.physicsBody applyImpulse:ccp(150, 0)];
     
     
     float delay = _spawnBasePause * (0.5 + 0.5*(float)rand()/RAND_MAX);
@@ -105,6 +121,9 @@
     id actionSeq = [CCActionSequence actions:actionDelay, actionSpawn, nil];
     [self runAction: actionSeq];
 }
+
+
+
 
 - (void) pause{
     NSLog(@"pause");
