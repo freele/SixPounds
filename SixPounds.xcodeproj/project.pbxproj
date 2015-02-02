@@ -94,6 +94,16 @@
 		B78A0B10198AF87200C63841 /* Published-Android in Resources */ = {isa = PBXBuildFile; fileRef = B78A0B0F198AF87200C63841 /* Published-Android */; };
 		EF04883D1A76DFEC00F1BACB /* BorderScene.m in Sources */ = {isa = PBXBuildFile; fileRef = EF04883C1A76DFEC00F1BACB /* BorderScene.m */; };
 		EF0488411A76E3CD00F1BACB /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0488401A76E3CD00F1BACB /* Player.m */; };
+		EF0DDFCE1A7DF9330032C149 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B121034197485FE004C1E1D /* Info.plist */; };
+		EF0DDFD61A7DFF910032C149 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0DDFCF1A7DFF910032C149 /* Icon-60.png */; };
+		EF0DDFD71A7DFF910032C149 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0DDFD01A7DFF910032C149 /* Icon-72.png */; };
+		EF0DDFD81A7DFF910032C149 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0DDFD11A7DFF910032C149 /* Icon-72@2x.png */; };
+		EF0DDFD91A7DFF910032C149 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0DDFD21A7DFF910032C149 /* Icon-Small-50.png */; };
+		EF0DDFDA1A7DFF910032C149 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0DDFD31A7DFF910032C149 /* Icon-Small-50@2x.png */; };
+		EF0DDFDB1A7DFF910032C149 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0DDFD41A7DFF910032C149 /* Icon.png */; };
+		EF0DDFDC1A7DFF910032C149 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0DDFD51A7DFF910032C149 /* Icon@2x.png */; };
+		EF0DDFDF1A7E00330032C149 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0DDFDD1A7E00330032C149 /* Icon-Small.png */; };
+		EF0DDFE01A7E00330032C149 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0DDFDE1A7E00330032C149 /* Icon-Small@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -235,6 +245,15 @@
 		EF04883C1A76DFEC00F1BACB /* BorderScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BorderScene.m; path = Source/BorderScene.m; sourceTree = "<group>"; };
 		EF04883F1A76E3CD00F1BACB /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = Source/Player.h; sourceTree = "<group>"; };
 		EF0488401A76E3CD00F1BACB /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = Source/Player.m; sourceTree = "<group>"; };
+		EF0DDFCF1A7DFF910032C149 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
+		EF0DDFD01A7DFF910032C149 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		EF0DDFD11A7DFF910032C149 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		EF0DDFD21A7DFF910032C149 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		EF0DDFD31A7DFF910032C149 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		EF0DDFD41A7DFF910032C149 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		EF0DDFD51A7DFF910032C149 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		EF0DDFDD1A7E00330032C149 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		EF0DDFDE1A7E00330032C149 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -478,6 +497,15 @@
 		B73789911807667A0076A88C /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				EF0DDFDD1A7E00330032C149 /* Icon-Small.png */,
+				EF0DDFDE1A7E00330032C149 /* Icon-Small@2x.png */,
+				EF0DDFCF1A7DFF910032C149 /* Icon-60.png */,
+				EF0DDFD01A7DFF910032C149 /* Icon-72.png */,
+				EF0DDFD11A7DFF910032C149 /* Icon-72@2x.png */,
+				EF0DDFD21A7DFF910032C149 /* Icon-Small-50.png */,
+				EF0DDFD31A7DFF910032C149 /* Icon-Small-50@2x.png */,
+				EF0DDFD41A7DFF910032C149 /* Icon.png */,
+				EF0DDFD51A7DFF910032C149 /* Icon@2x.png */,
 				B71F5907188484E7003F4D28 /* iPad-old.png */,
 				B71F5908188484E7003F4D28 /* iPad-old@2x.png */,
 				B71F5909188484E7003F4D28 /* iPad.png */,
@@ -774,21 +802,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF0DDFCE1A7DF9330032C149 /* Info.plist in Resources */,
 				B71F5919188484E7003F4D28 /* Settings.png in Resources */,
 				B7378978180762440076A88C /* Default@2x.png in Resources */,
 				B71F5914188484E7003F4D28 /* iPad@2x.png in Resources */,
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
+				EF0DDFDC1A7DFF910032C149 /* Icon@2x.png in Resources */,
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
 				B71F5916188484E7003F4D28 /* iPhone-old@2x.png in Resources */,
+				EF0DDFDF1A7E00330032C149 /* Icon-Small.png in Resources */,
 				B737893B180761570076A88C /* Published-iOS in Resources */,
+				EF0DDFDB1A7DFF910032C149 /* Icon.png in Resources */,
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
+				EF0DDFDA1A7DFF910032C149 /* Icon-Small-50@2x.png in Resources */,
 				B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */,
 				B71F5915188484E7003F4D28 /* iPhone-old.png in Resources */,
+				EF0DDFD71A7DFF910032C149 /* Icon-72.png in Resources */,
 				B71F5917188484E7003F4D28 /* iPhone.png in Resources */,
+				EF0DDFD81A7DFF910032C149 /* Icon-72@2x.png in Resources */,
 				B7378975180762440076A88C /* Default-568h@2x.png in Resources */,
 				B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */,
 				B7378977180762440076A88C /* Default.png in Resources */,
+				EF0DDFD91A7DFF910032C149 /* Icon-Small-50.png in Resources */,
 				B71F5911188484E7003F4D28 /* iPad-old.png in Resources */,
+				EF0DDFE01A7E00330032C149 /* Icon-Small@2x.png in Resources */,
+				EF0DDFD61A7DFF910032C149 /* Icon-60.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
