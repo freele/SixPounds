@@ -24,6 +24,8 @@
     
     int _counter;
     
+    CCProgressNode *_progressNode;
+    CCSprite *_progressBar;
     
     float _spawnBasePause;
 }
@@ -44,6 +46,24 @@
     id actionSeq = [CCActionSequence actions:actionDelay, actionSpawn, nil];
     [self runAction: actionSeq];
     
+    [self initProgressBar];
+
+    
+    self.userInteractionEnabled = YES;
+    
+}
+
+- (void) initProgressBar {
+    //    CCSprite *sprite = [CCSprite spriteWithImageNamed:@"progress_bar.png"];
+    _progressNode = [CCProgressNode progressWithSprite:_progressBar];
+    _progressNode.type = CCProgressNodeTypeBar;
+    _progressNode.midpoint = ccp(0.0f, 0.0f);
+    _progressNode.barChangeRate = ccp(1.0f, 0.0f);
+    _progressNode.percentage = 0.0f;
+    
+    _progressNode.positionType = _progressBar.positionType;
+    _progressNode.position = _progressBar.position;
+    [self addChild:_progressNode];
 }
 
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair drone:(CCNode *)drone bullet:(CCNode *)bullet{
@@ -77,6 +97,8 @@
         touchLocation.x > 0 &&
         touchLocation.y > 0){
         [self playerFlip];
+        
+        _progressNode.percentage += 1.0f;
     }
     
     touchLocation = [touch locationInNode:_fireInput];
